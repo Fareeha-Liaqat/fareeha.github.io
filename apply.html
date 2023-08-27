@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Apply Now</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html"><img src="images/logo.png" alt="Logo"></a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="apply.html">Apply Now</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="video-background">
+        <video autoplay muted loop>
+            <source src="videos/about-background-video.mp4" type="video/mp4">
+        </video>
+    <main class="homepage-content">
+        <div class="content">
+            <h1>Apply Now</h1>
+            <div class="apply-form">
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" required>
+                
+                    <label for="occupation">Occupation:</label>
+                    <input type="text" id="occupation" name="occupation" required>
+                
+                    <label for="mobile">Mobile Number:</label>
+                    <input type="tel" id="mobile" name="mobile" required>
+                
+                    <label for="email">Email ID:</label>
+                    <input type="email" id="email" name="email" required>
+                
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+                
+                    <button type="button" id="submit-btn">Submit</button>
+                </form>
+                <p id="confirmation-message"></p>
+            </div>
+        </div>
+    </main>
+    </section>
+    <footer>
+        <p>&copy; 2023 Super 20 by GMI. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const submitButton = document.getElementById('submit-btn');
+        const confirmationMessage = document.getElementById('confirmation-message');
+    
+        submitButton.addEventListener('click', () => {
+            // You can add code here to save the user's details and perform any necessary actions.
+            
+            // Display confirmation message
+            confirmationMessage.textContent = "Thank you for applying! We'll contact you soon.";
+        });
+    </script>
+    
+
+</body>
+</html>

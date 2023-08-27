@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Gallery</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html"><img src="images/logo.png" alt="Logo"></a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="apply.html">Apply Now</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="gallery">
+        <div class="gallery-content">
+            <h1>This is our gallery!</h1>
+            <div class="image-container">
+                <img src="images/image1.jpg" alt="Image 1" class="lightbox-image">
+                <img src="images/image2.jpg" alt="Image 2" class="lightbox-image">
+                <img src="images/image3.jpg" alt="Image 3" class="lightbox-image">
+                <img src="images/image4.jpg" alt="Image 4" class="lightbox-image">
+                <img src="images/image5.jpg" alt="Image 5" class="lightbox-image">
+                <img src="images/image6.jpg" alt="Image 6" class="lightbox-image">
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Super 20 by GMI. All rights reserved.</p>
+    </footer>
+
+<!-- Add this to the bottom of your HTML body -->
+<div class="lightbox-overlay" id="lightbox">
+    <span class="close-lightbox" id="close-lightbox">&times;</span>
+    <img src="" alt="Enlarged Image" class="lightbox-image-display" id="lightbox-image">
+</div>
+
+<script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const closeLightbox = document.getElementById('close-lightbox');
+    const lightboxImages = document.querySelectorAll('.lightbox-image');
+
+    lightboxImages.forEach(image => {
+        image.addEventListener('click', () => {
+            lightboxImage.src = image.src;
+            lightbox.style.display = 'flex';
+        });
+    });
+
+    closeLightbox.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+    });
+
+    lightbox.addEventListener('click', (event) => {
+        if (event.target === lightbox) {
+            lightbox.style.display = 'none';
+        }
+    });
+</script>
+
+</body>
+</html>
+
