@@ -1,1 +1,1 @@
-# super20.fareeha.github.io
+# fareeha.github.io
